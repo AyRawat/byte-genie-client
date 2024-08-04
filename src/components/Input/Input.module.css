@@ -20,10 +20,10 @@
     border-radius: 0 10px 10px 0;
     font-size: 16px;
     font-weight: bold;
-    background-color: rgb(218, 255, 170);
+    background-color: rgb(74, 146, 214);
   }
   
   .btn:hover {
     cursor: pointer;
-    background-color: rgb(200, 253, 130);
+    background-color: rgb(3, 36, 120);
   }

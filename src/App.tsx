@@ -23,6 +23,7 @@ const App: React.FC = () => {
     const [loading, setLoading] = useState<boolean>(false)
 
     const handleSubmit = async () => {
+      if (input.trim() === '') return 
         setLoading(true)
         const prompt = {
             role: 'user',
@@ -92,11 +93,13 @@ const App: React.FC = () => {
                         </div>
                     )}
                 </div>
-                <Input
-                    value={input}
-                    onChange={(e) => setInput(e.target.value)}
-                    onClick={handleSubmit}
-                />
+                  {!loading && (
+                    <Input
+                        value={input}
+                        onChange={(e) => setInput(e.target.value)}
+                        onClick={handleSubmit}
+                    />
+                )}
             </div>
             <div className="Column">
                 <h3 className="Title">History</h3>
